@@ -5,7 +5,7 @@ using UnityEngine;
 public class BotonScript : MonoBehaviour
 {
     public GameObject botonGO;
-
+    public CoheteScript coheteScript; // referenciando al script de cohete
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,14 @@ public class BotonScript : MonoBehaviour
     void OnMouseDown()
     {
         botonGO.SetActive(false);
+        coheteScript.Despegue(); // poniendo la funcion en la variable de boton
+        
     }
 
     void OnMouseUp()
     {
         botonGO.SetActive(true);
     }
+
+   
 }
